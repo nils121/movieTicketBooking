@@ -5,9 +5,11 @@ import useForm from './useForm';
 import './form.css';
 
 const FormSignup = ({ submitForm }) => {
+  const isLogin = false
   const { handleChange, handleSubmit, values, errors } = useForm(
     submitForm,
-    validate
+    validate,
+    isLogin
   );
 
   return (

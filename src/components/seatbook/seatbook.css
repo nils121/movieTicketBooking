@@ -1,0 +1,87 @@
+#app {}
+
+h1 {
+    text-align: center;
+}
+
+.container {
+    width: 600px;
+    margin: auto;
+}
+
+.grid td {
+    width: 80px;
+    height: 50px;
+    padding: 50px 30px;
+    border: 2px solid orange;
+    text-align: center;
+    float: left;
+    margin: 5px;
+}
+
+.grid td:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
+.reserved {
+    background: orange;
+    color: #fff;
+   
+}
+
+.reserved::after {
+    content: 'RESERVED';
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-reserved {
+    background: rgb(12, 132, 230);
+    color: #fff;
+   
+}
+
+.glass-reserved::after {
+    content: 'RESERVED';
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.available::after {
+    content: 'AVAILABLE';
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-available {
+    color: #333;
+    
+}
+
+.glass-available::after {
+    content: 'AVAILABLE';
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.available {
+    color: #333;
+    
+}
+
+li {
+    list-style: none;
+}

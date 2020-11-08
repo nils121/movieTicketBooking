@@ -10,7 +10,7 @@ const Login = ({ submitForm }) => {
   const isLogin = true
     const { handleChange, handleSubmit, values, errors } = useForm(
       submitForm,
-      validate,
+      validate, 
       isLogin
     );
   
