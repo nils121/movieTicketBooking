@@ -1,7 +1,6 @@
 import React from 'react';
 import DrawGrid from './DrawGrid'
 import './seatbook.css'
-
 class SeatBookComponent extends React.Component {
     constructor() {
         super();
@@ -9,10 +8,10 @@ class SeatBookComponent extends React.Component {
         this.glass3DSeat = [];
         const normalCount = process.env.REACT_APP_TOT_NORMAL_SEATS || 10;
         const glassCount = process.env.REACT_APP_TOT_GLASS_SEATS || 10
-        for (let i = 0; i <= normalCount; i++) {
+        for (let i = 1; i <= normalCount; i++) {
             this.normalSeat.push(i)
         }
-        for (let j = 0; j <= glassCount; j++) {
+        for (let j = 1; j <= glassCount; j++) {
             this.glass3DSeat.push(j)
         }
         this.state = {
@@ -33,10 +32,15 @@ class SeatBookComponent extends React.Component {
                 seatReserved: this.state.seatReserved.filter(res => res != seat)
             })
         } else {
-            this.setState({
-                seatReserved: this.state.seatReserved.concat(seat),
-                seatAvailable: this.state.seatAvailable.filter(res => res != seat)
-            })
+            if (this.state.seatReserved.length < 5) {
+                this.setState({
+                    seatReserved: this.state.seatReserved.concat(seat),
+                    seatAvailable: this.state.seatAvailable.filter(res => res != seat)
+                })
+            }
+            else {
+                alert("You can reserved upto 5 seats only.")
+            }
         }
     }
 
@@ -47,18 +51,22 @@ class SeatBookComponent extends React.Component {
                 glassReserved: this.state.glassReserved.filter(res => res != seat)
             })
         } else {
-            this.setState({
-                glassReserved: this.state.glassReserved.concat(seat),
-                glassAvailable: this.state.glassAvailable.filter(res => res != seat)
-            })
+            if (this.state.glassReserved.length < 5) {
+                this.setState({
+                    glassReserved: this.state.glassReserved.concat(seat),
+                    glassAvailable: this.state.glassAvailable.filter(res => res != seat)
+                })
+            }
+            else {
+                alert("You can reserved upto 5 seats only.")
+            }
         }
     }
 
     render() {
-        console.log("env11", process.env.TOTAL_SEATS)
         return (
             <div>
-                <h1>Book Seat here</h1>
+                <h1>Reserve your place! </h1>
                 <DrawGrid
                     seat={this.state.normal_seats}
                     glassSeat={this.state.glass_seats}

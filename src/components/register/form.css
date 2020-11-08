@@ -1,5 +1,5 @@
 .form-container {
-  margin: 100px auto;
+  margin: 30px auto;
   width: 40%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
@@ -30,7 +30,7 @@
   right: 3%;
   font-size: 1.5rem;
   z-index: 1;
-  color: #fff;
+  color: black;
   cursor: pointer;
 }
 
@@ -155,9 +155,33 @@
   white-space: pre;
 }
 
+.full {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
 .heading {
   display: flex;
   font-weight: bold;
   justify-content: center;
   text-align: center;
+}
+
+.checkout {
+  display: flex;
+  flex-direction: column;
+  color: blueviolet;
+  align-items: center;
+  margin-bottom: 50%;
+}
+
+.top {
+  position: relative;
+  top: 20px;
+  color: blue;
+  font-size: 20px;
+  ;
 }

@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import Login from './components/login/Login';
 import Register from './components/register/Register';
 import SeatBookComponent from './components/seatbook/SeatBookComponent';
+import CheckOutComponent from './components/seatbook/CheckOutComponent';
 
 import './App.css';
 
 function App() {
-  console.log("env", process.env.REACT_APP_TOT_SEATS)
   return (
     <div className="app">
       <Router>
@@ -23,6 +23,9 @@ function App() {
           </Route>
           <Route path="/seatbook">
             <SeatBookComponent />
+          </Route>
+          <Route path="/checkout">
+            <CheckOutComponent />
           </Route>
         </Switch>
       </Router>

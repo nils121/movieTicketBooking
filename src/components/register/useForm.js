@@ -22,11 +22,10 @@ const useForm = (callback, validate, isLogin) => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    if(isLogin && values.username === 'scott' && values.password ==='123456') {
-
+    if(values.username === 'scott' && values.password ==='123456') {
       history.push("/seatbook")
     } else {
-      alert("Invalid Username or Password")
+      // alert("Invalid Username or Password")
     }
     
     setErrors(validate(values));

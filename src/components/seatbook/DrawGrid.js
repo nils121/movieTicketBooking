@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import AvailableList from './AvailableList';
-import ReservedList from './ReservedList';
-
 import './seatbook.css'
+import { Link, useHistory } from 'react-router-dom';
 
 const DrawGrid = (props) => {
+  const history = useHistory('')
 
   const onClickSeat = (seat) => {
     props.onClickData(seat);
@@ -13,9 +12,20 @@ const DrawGrid = (props) => {
   const onClickGlassSeat = (seat) => {
     props.onClickGlassData(seat);
   }
+
+  const handleConfirm = () => {
+    history.push({
+      pathname: '/checkout',
+      state: {
+        reserved: props.reserved,
+        glassReserved: props.glassReserved
+      }
+    })
+  }
+
   return (
     <div className="container">
-      <h2>Choose Normal 3D</h2>
+      <h2>Choose from Normal 3D 🎥</h2>
       <table className="grid">
         <tbody>
           <tr>
@@ -26,8 +36,8 @@ const DrawGrid = (props) => {
           </tr>
         </tbody>
       </table>
-
-      <h2>Choose Glass 3D 🥽</h2>
+      <br />
+      <h2>Choose from Glass 3D 🥽</h2>
       <table className="grid">
         <tbody>
           <tr>
@@ -39,8 +49,9 @@ const DrawGrid = (props) => {
         </tbody>
       </table>
 
-      <AvailableList available={props.available} />
-      <ReservedList reserved={props.reserved} />
+      <button className='form-input-btn full' onClick={handleConfirm}>
+        Confirm
+        </button>
     </div>
   )
 }
