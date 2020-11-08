@@ -1,11 +1,9 @@
-import React from 'react'
+import React from 'react';
+import Form from './Form';
+import './form.css';
 
 function Register() {
-    return (
-        <div className="register">
-            register
-        </div>
-    )
+  return <Form />;
 }
 
-export default Register
+export default Register;

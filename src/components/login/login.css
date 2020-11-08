@@ -1,5 +1,4 @@
-.login {
-    background-color: #e9ebee;
+/* .login {
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -34,7 +33,6 @@
     font-weight: 400;
     margin-top: 24px;
     margin-bottom:20px;
-    font-family: Helvetica, Arial, sans-serif
 }
 
 .login-container > form > center > input {
@@ -88,14 +86,12 @@
 
 .sideinfo > h5 {
     color: #1877f2;
-    font-family: Helvetica, Arial, sans-serif;
     font-weight: 500;
     cursor: pointer;
 }
 
 .signup {
     color: #1877f2 !important;
-    font-family: Helvetica, Arial, sans-serif;
     font-weight: 500;
     cursor: pointer;
 }
@@ -115,4 +111,4 @@
 
 Link {
     text-decoration: none;
-}
+} */
