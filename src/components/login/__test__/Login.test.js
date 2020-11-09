@@ -8,16 +8,15 @@ describe('<Login /> with no props', () => {
     expect(container.html()).toMatchSnapshot();
   });
 
-  it('should have an email field', () => {
-    expect(container.find('input[type="email"]').length).toEqual(1);
+  it('should have an username field', () => {
+    expect(container.find('input[type="username"]').length).toEqual(1);
   });
 
-  it('should have proper props for email field', () => {
-    expect(container.find('input[type="email"]').props()).toEqual({
-      className: '',
-      onBlur: expect.any(Function),
-      placeholder: 'email',
-      type: 'email',
+  it('should have proper props for password field', () => {
+    expect(container.find('input[type="password"]').props()).toEqual({
+      className: 'form-control',
+      placeholder: 'password',
+      type: 'password',
     });
   });
 
